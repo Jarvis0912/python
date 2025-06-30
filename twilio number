@@ -1,0 +1,13 @@
+from twilio.rest import Client
+account_sid = ''
+auth_token = ''
+twilio_number = ''
+target_number = ['+9193424 80882']
+client = Client(account_sid , auth_token)
+for i in target_number:
+    message = Client.messages.create(
+        body="HI champion.. ALL THE BEST",
+        from_=twilio_number,
+        to=int
+    )
+print("Message sent! STD:", message.sid)
